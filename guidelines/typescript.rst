@@ -12,7 +12,7 @@ Install **Visual Studio Code**, SonarLint extension, and JAVA SDK first**, then 
 
 .. image:: ../_static/config-sonarqube.png
 
-After clicked on Edit in settings.json, config your project like this:
+After clicked on Edit in settings.json, config global sonarqube for VS Code first:
 
 .. code:: json
 
@@ -21,18 +21,28 @@ After clicked on Edit in settings.json, config your project like this:
             "sonarlint.ls.javaHome": "C:\\Program Files\\Java\\jdk1.8.0_11",
             "sonarlint.connectedMode.servers": [
                 {
-                    "serverId": "localsonarqube",
-                    "serverUrl": "http://sonarqube.nexdev.net",
-                    "token": "d1f2bdcb11993b2f61fbb2e7e96c5461b95158ea" 
-                }],
-            "sonarlint.connectedMode.project": {  
-                    "serverId":"localsonarqube",
-                    "projectKey": "CN88-Features"
-                }
+                "serverId": "localsonarqube",
+                "serverUrl": "http://sonarqube.nexdev.net",
+                "token": "d1f2bdcb11993b2f61fbb2e7e96c5461b95158ea"
+                }]
+        }
+
+Go to http://sonarqube.nexdev.net/account/security/ to generate your login token
+
+Then config for your project
+
+.. image:: ../_static/config-workspace.png
+
+.. code:: json
+
+        {
+            "sonarlint.connectedMode.project":{  
+                "serverId":"localsonarqube",
+                "projectKey": "CN88-Features"
+            }
         }
 
 
-Go to http://sonarqube.nexdev.net/account/security/ to generate your login token
 
 **Step 2. Update latest rules (for first time), check your ts file errors and enjoy fixing**
 
