@@ -6,7 +6,7 @@ Please follow these steps to config and check sonarqube for typescipt file
 
 **Step 1. Link project to sonarqube server using Visual Studio Code**
 
-Install **Visual Studio Code** and **SonarLint** extension first, then open project website folder, follow this image to config:
+Install **Visual Studio Code**, SonarLint extension, and JAVA SDK first**, then open project website folder, follow this image to config:
 
 .. image:: ../_static/install-sonarlint.png
 
@@ -32,7 +32,7 @@ After clicked on Edit in settings.json, config your project like this:
         }
 
 
-Go to http://sonarqube.nexdev.net/account/security/ to get your login token
+Go to http://sonarqube.nexdev.net/account/security/ to generate your login token
 
 **Step 2. Update latest rules (for first time), check your ts file errors and enjoy fixing**
 
